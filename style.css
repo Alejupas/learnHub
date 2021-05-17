@@ -25,3 +25,18 @@ h4 {
   border-radius: 15%;
   margin: 10px;
 }
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li > a {
+  padding-left: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
