@@ -58,3 +58,9 @@ li > a:hover {
 todoDiv > ul {
   display: block;
 }
+
+.klaidele {
+  font-size: 28px;
+  color: rgb(244, 207, 253);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

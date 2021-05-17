@@ -79,3 +79,13 @@ function getData(data) {
   });
   return;
 }
+
+// * * 23 vieno komito metu sukurti diva su siek tiek stiliu kad matytusi, jo viduje turetu buti * antraste h3 su tekstu "cia buvo klaida"
+
+const divas = document.createElement("div");
+const divoH3 = document.createElement("h3");
+divoH3.className = "klaidele";
+divoH3.textContent = "cia buvo klaida";
+divoH3.style.textAlign = "center";
+divas.appendChild(divoH3);
+todoDiv.insertAdjacentElement("afterend", divas);
