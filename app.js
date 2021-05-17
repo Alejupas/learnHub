@@ -8,4 +8,4 @@ const data = new Date().toDateString() + new Date().toTimeString();
 h4El.textContent = data;
 // console.log(data);
 // console.log(laikas);
-document.body.append(h4El);
+document.body.prepend(h4El);
