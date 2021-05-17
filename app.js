@@ -28,3 +28,27 @@ const generateJoke = async () => {
   navBar.insertAdjacentElement("afterend", jokeDiv);
 };
 generateJoke();
+
+// * * 20. sukurti saka 'article' joje sukurti secion su antraste nuotrauka ir keletu pastraipu, sustilizuoti kad atrodytu nice. visa procesa commintinti ties loginiais zingsniais
+const article2 = document.createElement("article");
+article2.className = "article2";
+
+const article1 = document.getElementById("article1");
+console.log(article1);
+
+article1.insertAdjacentElement("afterend", article2);
+
+article2.style.display = "block";
+
+const artH = document.createElement("h3");
+artH.textContent = "Cia yra antraste articlo";
+
+const artImg = document.createElement("img");
+artImg.src = "https://picsum.photos/800/400";
+
+const artP = document.createElement("p");
+artP.textContent =
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti quasi voluptate ducimus corporis nobis, laboriosam nemo fuga officiis. Consequuntur omnis pariatur sunt odio ipsum necessitatibus ea soluta tenetur error non.";
+artP.style.width = "50%";
+artP.style.margin = "0 auto";
+article2.append(artH, artImg, artP);
