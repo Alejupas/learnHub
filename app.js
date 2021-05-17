@@ -20,7 +20,7 @@ const generateJoke = async () => {
   const navBar = document.querySelector(".nav-bar");
   const resp = await fetch(norrisJokeUrl);
   const data = await resp.json();
-  console.log(data);
+  //   console.log(data);
   jokeDiv.innerHTML = `
   <h2>${data.value}</h2>`;
   jokeDiv.style.textAlign = "center";
@@ -34,7 +34,7 @@ const article2 = document.createElement("article");
 article2.className = "article2";
 
 const article1 = document.getElementById("article1");
-console.log(article1);
+// console.log(article1);
 
 article1.insertAdjacentElement("afterend", article2);
 
@@ -52,3 +52,28 @@ artP.textContent =
 artP.style.width = "55%";
 artP.style.margin = "0 auto";
 article2.append(artH, artImg, artP);
+
+// * * 22. pagrindinej sakoj js faile parasyti funkcija kuri parsiuncia 10 todo is jsonPlaceholder * api ir juos atvaizduoti saraso pavidalu.
+
+fetch("https://jsonplaceholder.typicode.com/todos/")
+  .then((response) => response.json())
+  .then((data) => getData(data.splice(0, 10)))
+  .catch((err) => console.log(err));
+
+const todoDiv = document.createElement("div");
+todoDiv.className = "todo";
+article2.insertAdjacentElement("afterend", todoDiv);
+
+function getData(data) {
+  data.forEach((obj) => {
+    const ul = document.createElement("ul");
+    const li = document.createElement("li");
+    ul.appendChild(li);
+    todoDiv.appendChild(ul);
+    todoDiv.innerHTML = `
+  <ul>
+  <li>${obj.title}, completed: ${obj.completed}</li>
+  </ul>`;
+  });
+  return;
+}
