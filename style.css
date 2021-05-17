@@ -27,7 +27,7 @@ h4 {
   box-shadow: 4px 4px 4px white;
 }
 
-ul {
+.nav-link > ul {
   display: flex;
   list-style-type: none;
 }
@@ -53,4 +53,8 @@ li > a:hover {
 .article2 > h3 {
   font-size: 40px;
   margin-bottom: 10px;
+}
+
+todoDiv > ul {
+  display: block;
 }

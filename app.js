@@ -65,6 +65,7 @@ todoDiv.className = "todo";
 article2.insertAdjacentElement("afterend", todoDiv);
 
 const ul = document.createElement("ul");
+ul.style.listStyleType = "none";
 todoDiv.appendChild(ul);
 
 function getData(data) {
