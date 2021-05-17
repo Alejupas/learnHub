@@ -64,13 +64,14 @@ const todoDiv = document.createElement("div");
 todoDiv.className = "todo";
 article2.insertAdjacentElement("afterend", todoDiv);
 
+const ul = document.createElement("ul");
+todoDiv.appendChild(ul);
+
 function getData(data) {
   data.forEach((obj) => {
-    const ul = document.createElement("ul");
     const li = document.createElement("li");
     ul.appendChild(li);
-    todoDiv.appendChild(ul);
-    todoDiv.innerHTML = `
+    li.innerHTML = `
   <ul>
   <li>${obj.title}, completed: ${obj.completed}</li>
   </ul>`;
