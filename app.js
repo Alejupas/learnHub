@@ -49,6 +49,6 @@ artImg.src = "https://picsum.photos/800/400";
 const artP = document.createElement("p");
 artP.textContent =
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti quasi voluptate ducimus corporis nobis, laboriosam nemo fuga officiis. Consequuntur omnis pariatur sunt odio ipsum necessitatibus ea soluta tenetur error non.";
-artP.style.width = "50%";
+artP.style.width = "55%";
 artP.style.margin = "0 auto";
 article2.append(artH, artImg, artP);
